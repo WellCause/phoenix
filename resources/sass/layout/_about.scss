@@ -1,0 +1,73 @@
+.about {
+    grid-column: full-start / full-end;
+    display: grid;
+    grid-template-columns: $grid-columns-full;
+    align-items: center;
+    position: relative;
+    margin: 9rem 0;
+    padding: 3rem 0;
+    background-image: url(../img/bg_2.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+
+    &__content {
+        grid-column: center-start / center-end;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-items: center;
+        
+        &::before {
+            @include left-before;
+            top: 0;
+            background-image: linear-gradient(rgba($color-green,.8), rgba($color-green, .8));
+            height: 60rem;
+            z-index: 5;
+        }
+
+        &::after {
+            @include right-after;
+            top: 0;
+            background-image: linear-gradient(rgba($color-blue,.8), rgba($color-blue, .8));
+            height: 60rem;
+            z-index: 5;
+        }
+        
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        .heading-2 {
+            color: #fff;
+            position: relative;
+            z-index: 6;
+        }
+
+        button {
+            position: relative;
+            z-index: 6;
+            align-self: flex-start;
+        }
+    }
+
+    &__text {
+        position: relative;
+        font-size: 1.5rem;
+        line-height: 1.6;
+        width: 90%;
+        margin: 4rem 0;
+        z-index: 6;
+    }
+
+    &__img {
+        max-height: 50rem;
+        max-width: 90%;
+        justify-self: end;
+        z-index: 6;
+        box-shadow: 0 0 2rem rgba(0, 0, 0, .5);
+    }
+}

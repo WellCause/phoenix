@@ -31,29 +31,15 @@
         position: relative;
 
         &::before {
-            content: '';
-            width: 500%;
-            height: 40rem;
-            left: -150%;
-            top: -7.5rem;
-            position: absolute;
-            z-index: 1;
+            @include left-before;
             background-color: $color-blue;
-            transform: skewX(-40deg);
-            z-index: -1;
+            height: 60rem;
         }
 
         &::after {
-            content: '';
-            width: 500%;
-            height: 40rem;
-            left: 50%;
-            top: -7.5rem;
-            position: absolute;
-            z-index: 1;
+            @include right-after;
             background-color: $color-green;
-            transform: skewX(-40deg);
-            z-index: -1;
+            height: 60rem;
         }
     }
 
@@ -68,7 +54,6 @@
     &__img {
         height: 10rem;
         border-radius: 50%;
-
     }
 
     &__team {
@@ -101,14 +86,15 @@
     }
 
     &__video {
-        height: 30rem;
-        width: 80rem;
-        margin-top: 5rem;
+        
+        margin-top: 12rem;
         grid-column: center-start / center-end;
-        overflow: hidden;
+        // overflow: hidden;
     }
 
     &__preview {
+        height: auto;
+        width: 40vw;
         justify-self: center;
         transform: translateY(-9rem);
 

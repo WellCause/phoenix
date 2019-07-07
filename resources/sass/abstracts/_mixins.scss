@@ -29,3 +29,27 @@
     border-radius: 50%;
     margin-bottom: .8rem;
 }
+
+@mixin left-before {
+    content: '';
+    width: 500%;
+    height: 40rem;
+    left: -150%;
+    top: -7.5rem;
+    position: absolute;
+    z-index: 1;
+    transform: skewX(-40deg);
+    z-index: -1;
+}
+
+@mixin right-after {
+    content: '';
+    width: 500%;
+    height: 40rem;
+    left: 50%;
+    top: -7.5rem;
+    position: absolute;
+    z-index: 1;
+    transform: skewX(-40deg);
+    z-index: -1;
+}
