@@ -1,0 +1,59 @@
+.countdown {
+    background-color: $color-primary;
+    grid-column: full-start / full-end;
+}
+
+.latest-game {
+    background-color: rgb(0, 255, 13);
+    grid-column: full-start / full-end;
+}
+
+.game-schedule {
+    background-color: rgb(0, 255, 234);
+    grid-column: center-start / center-end;
+}
+
+.about {
+    background-color: rgb(0, 110, 255);
+    grid-column: full-start / full-end;
+}
+
+.next-match {
+    background-color: rgb(111, 0, 255);
+    grid-column: center-start / center-end;
+}
+
+.squad {
+    background-color: rgb(234, 0, 255);
+    grid-column: full-start / full-end;
+}
+
+.features {
+    background-color: rgb(255, 0, 64);
+    grid-column: center-start / center-end;
+}
+
+.testimonials {
+    background-color: rgb(255, 230, 0);
+    grid-column: full-start / full-end;
+}
+
+.blog {
+    background-color: rgb(94, 255, 0);
+    grid-column: center-start / center-end;
+}
+
+.stats {
+    background-color: rgb(0, 255, 179);
+    grid-column: full-start / full-end;
+}
+
+.subscribe {
+    background-color: rgb(0, 4, 255);
+    grid-column: full-start / full-end;
+}
+
+.footer {
+    background-color: rgb(255, 0, 221);
+    grid-column: full-start / full-end;
+}

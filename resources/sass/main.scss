@@ -1,4 +1,13 @@
 @import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'components/btn';
+@import 'components/nav';
+
+@import 'layout/header';
+@import 'layout/hero';
 
 @import 'base/base';
 @import 'base/typography';
+
+@import 'pages/home';

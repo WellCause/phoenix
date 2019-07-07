@@ -1,0 +1,14 @@
+// COLORS
+$color-primary: #171b21;
+$color-green: #00bd56;
+$color-blue: #207dff;
+$color-yellow: #fdd043;
+
+
+// GRID FULL COLUMNS MARKUP
+$grid-columns-full: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
+
+// GRID CENTER POSITIONING
+
+$grid-center: center-start / center-end;
+

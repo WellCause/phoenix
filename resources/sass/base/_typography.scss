@@ -1,0 +1,19 @@
+.heading {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+.heading-1 {
+    @extend .heading;
+    font-size: 8rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.heading-2 {
+    @extend .heading;
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+

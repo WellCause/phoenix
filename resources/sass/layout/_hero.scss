@@ -1,0 +1,34 @@
+.hero {
+    grid-column: full-start / full-end;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,.3 ), rgba(0,0,0,.3 )), url(../img/bg_1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+    align-content: center;
+    grid-template-columns: $grid-columns-full;
+    grid-row-gap: 2rem;
+    justify-items: start;
+
+    align-content: center;
+
+    .heading-1 {
+        grid-column: center-start / col-end 4;
+        font-weight: 500;
+    }
+
+    &__text {
+        font-size: 2rem;
+        grid-column: center-start / col-end 3;
+    }
+
+    &__buttons {
+        height: 1rem;
+        grid-column: center-start / col-end 2;
+        grid-row: 3 / 4;
+    }
+
+    .btn--blue {
+        margin-right: .5rem;
+    }
+}

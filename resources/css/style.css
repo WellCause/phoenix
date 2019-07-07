@@ -1,0 +1,185 @@
+.btn {
+  border: none;
+  color: #fff;
+  padding: 2rem 3rem;
+  border-radius: .3rem;
+  font-size: 1.5rem;
+  font-weight: 300; }
+  .btn--blue {
+    background-color: #207dff; }
+  .btn--green {
+    background-color: #00bd56; }
+
+.nav {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5rem; }
+  .nav__list {
+    list-style: none;
+    display: flex;
+    align-items: center; }
+  .nav__item {
+    transition: color .2s;
+    padding: 1.5rem 2rem;
+    cursor: pointer; }
+    .nav__item:last-child {
+      background-color: #171b21;
+      padding: 1.5rem 2rem;
+      border-radius: .3rem; }
+    .nav__item:hover {
+      color: #00bd56; }
+  .nav__link:link, .nav__link:visited {
+    text-decoration: none;
+    color: inherit; }
+
+.header {
+  grid-column: full-start / full-end;
+  position: absolute;
+  width: 100%;
+  display: grid;
+  grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
+  align-items: center;
+  height: 13rem;
+  z-index: 10; }
+  .header::before {
+    content: '';
+    width: 38%;
+    height: 13rem;
+    left: -10rem;
+    top: 0;
+    position: absolute;
+    z-index: 1;
+    background-color: #171b21;
+    transform: skewX(-40deg); }
+  .header__club {
+    position: relative;
+    grid-column: center-start / 5;
+    display: flex;
+    align-items: center;
+    z-index: 10; }
+  .header__logo {
+    position: relative;
+    display: inline-block;
+    fill: #fdd043;
+    height: 6rem;
+    width: 6rem;
+    z-index: 10; }
+  .header .nav {
+    grid-column: col-start 4 / center-end;
+    justify-self: end; }
+    .header .nav__list {
+      position: relative;
+      z-index: 10; }
+  .header .nav::before {
+    content: '';
+    width: 100%;
+    height: 9rem;
+    left: 0;
+    top: 2rem;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: -1; }
+
+.hero {
+  grid-column: full-start / full-end;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/bg_1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  display: grid;
+  align-content: center;
+  grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
+  grid-row-gap: 2rem;
+  justify-items: start;
+  align-content: center; }
+  .hero .heading-1 {
+    grid-column: center-start / col-end 4;
+    font-weight: 500; }
+  .hero__text {
+    font-size: 2rem;
+    grid-column: center-start / col-end 3; }
+  .hero__buttons {
+    height: 1rem;
+    grid-column: center-start / col-end 2;
+    grid-row: 3 / 4; }
+  .hero .btn--blue {
+    margin-right: .5rem; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+.container {
+  display: grid;
+  grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
+  font-family: 'Lato', sans-serif;
+  color: #fff; }
+
+.heading, .heading-1, .heading-2 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase; }
+
+.heading-1 {
+  font-size: 8rem;
+  line-height: 1.2;
+  font-weight: 700; }
+
+.heading-2 {
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 700; }
+
+.countdown {
+  background-color: #171b21;
+  grid-column: full-start / full-end; }
+
+.latest-game {
+  background-color: #00ff0d;
+  grid-column: full-start / full-end; }
+
+.game-schedule {
+  background-color: #00ffea;
+  grid-column: center-start / center-end; }
+
+.about {
+  background-color: #006eff;
+  grid-column: full-start / full-end; }
+
+.next-match {
+  background-color: #6f00ff;
+  grid-column: center-start / center-end; }
+
+.squad {
+  background-color: #ea00ff;
+  grid-column: full-start / full-end; }
+
+.features {
+  background-color: #ff0040;
+  grid-column: center-start / center-end; }
+
+.testimonials {
+  background-color: #ffe600;
+  grid-column: full-start / full-end; }
+
+.blog {
+  background-color: #5eff00;
+  grid-column: center-start / center-end; }
+
+.stats {
+  background-color: #00ffb3;
+  grid-column: full-start / full-end; }
+
+.subscribe {
+  background-color: #0004ff;
+  grid-column: full-start / full-end; }
+
+.footer {
+  background-color: #ff00dd;
+  grid-column: full-start / full-end; }

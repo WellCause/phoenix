@@ -1,0 +1,17 @@
+.btn {
+    border: none;
+    color: #fff;
+    padding: 2rem 3rem;
+    border-radius: .3rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    // width: 15rem;
+
+    &--blue {
+        background-color: $color-blue;
+    }
+
+    &--green {
+        background-color: $color-green;
+    }
+}
