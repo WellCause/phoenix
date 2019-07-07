@@ -3,6 +3,10 @@
     text-transform: uppercase;
 }
 
+.heading--white {
+    color: #fff !important;
+}
+
 .heading-1 {
     @extend .heading;
     font-size: 8rem;
@@ -12,7 +16,8 @@
 
 .heading-2 {
     @extend .heading;
-    font-size: 3rem;
+    color: $color-primary;
+    font-size: 5rem;
     line-height: 1.2;
     font-weight: 700;
 }
@@ -24,3 +29,9 @@
     font-weight: 700;
 }
 
+.heading-4 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #999;
+}

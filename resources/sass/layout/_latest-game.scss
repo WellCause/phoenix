@@ -1,0 +1,119 @@
+.latest-game {
+    padding-top: 9rem;
+    display: grid;
+    grid-template-columns: $grid-columns-full;
+    grid-row-gap: 2rem;
+    justify-items: center;
+    grid-column: full-start / full-end;
+    color: $color-primary;
+    overflow: hidden;
+
+    .heading-2,
+    .heading-4,
+    &__date {
+        grid-column: center-start / center-end;
+    }
+
+    &__date {
+        // color: #fff;
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        display: inline-block;
+        margin-top: 5rem;
+    }
+
+    &__result {
+        grid-column: col-start 2 / col-end 7;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 500%;
+            height: 40rem;
+            left: -150%;
+            top: -7.5rem;
+            position: absolute;
+            z-index: 1;
+            background-color: $color-blue;
+            transform: skewX(-40deg);
+            z-index: -1;
+        }
+
+        &::after {
+            content: '';
+            width: 500%;
+            height: 40rem;
+            left: 50%;
+            top: -7.5rem;
+            position: absolute;
+            z-index: 1;
+            background-color: $color-green;
+            transform: skewX(-40deg);
+            z-index: -1;
+        }
+    }
+
+    &__vs {
+        font-size: 3rem;
+    }
+
+    button {
+        grid-column: col-start 4 / col-end 5;
+    }
+
+    &__img {
+        height: 10rem;
+        border-radius: 50%;
+
+    }
+
+    &__team {
+        display: flex;
+        align-items: center;
+
+        &:last-child {
+            span {
+                color: rgba(0, 0, 0, .5);
+            }
+        }
+    }
+
+    &__points {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 20rem;
+
+        span {
+            font-family: 'Oswald';
+            font-size: 6rem;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__video {
+        height: 30rem;
+        width: 80rem;
+        margin-top: 5rem;
+        grid-column: center-start / center-end;
+        overflow: hidden;
+    }
+
+    &__preview {
+        justify-self: center;
+        transform: translateY(-9rem);
+
+        &::before {
+            content: 'sdf';
+        }
+    }
+}

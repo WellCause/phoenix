@@ -4,11 +4,17 @@
   padding: 2rem 3rem;
   border-radius: .3rem;
   font-size: 1.5rem;
-  font-weight: 300; }
+  font-weight: 300;
+  cursor: pointer; }
   .btn--blue {
     background-color: #207dff; }
   .btn--green {
     background-color: #00bd56; }
+  .btn--black {
+    background-color: #000;
+    padding: 1.5rem 3rem; }
+    .btn--black:hover {
+      background-color: #222; }
 
 .nav {
   font-family: 'Oswald', sans-serif;
@@ -44,7 +50,7 @@
   z-index: 10; }
   .header::before {
     content: '';
-    width: 38%;
+    width: 43%;
     height: 13rem;
     left: -10rem;
     top: 0;
@@ -62,8 +68,8 @@
     position: relative;
     display: inline-block;
     fill: #fdd043;
-    height: 6rem;
-    width: 6rem;
+    height: 8rem;
+    width: 8rem;
     z-index: 10; }
   .header .nav {
     grid-column: col-start 4 / center-end;
@@ -106,14 +112,16 @@
     margin-right: .5rem; }
 
 .countdown {
+  padding: 4rem;
+  background-color: #171b21;
+  grid-column: full-start / full-end;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-row-gap: 3rem;
+  grid-column-gap: 2rem;
   justify-content: space-evenly;
   justify-items: center;
-  align-items: center;
-  padding: 4rem;
-  grid-row-gap: 3rem;
-  grid-column-gap: 2rem; }
+  align-items: center; }
   .countdown__vs {
     filter: brightness(0.8);
     display: flex;
@@ -161,6 +169,88 @@
     font-size: 1.8rem;
     padding: 2rem 8rem; }
 
+.latest-game {
+  padding-top: 9rem;
+  display: grid;
+  grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
+  grid-row-gap: 2rem;
+  justify-items: center;
+  grid-column: full-start / full-end;
+  color: #171b21;
+  overflow: hidden; }
+  .latest-game .heading-2,
+  .latest-game .heading-4, .latest-game__date {
+    grid-column: center-start / center-end; }
+  .latest-game__date {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    display: inline-block;
+    margin-top: 5rem; }
+  .latest-game__result {
+    grid-column: col-start 2 / col-end 7;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; }
+    .latest-game__result::before {
+      content: '';
+      width: 500%;
+      height: 40rem;
+      left: -150%;
+      top: -7.5rem;
+      position: absolute;
+      z-index: 1;
+      background-color: #207dff;
+      transform: skewX(-40deg);
+      z-index: -1; }
+    .latest-game__result::after {
+      content: '';
+      width: 500%;
+      height: 40rem;
+      left: 50%;
+      top: -7.5rem;
+      position: absolute;
+      z-index: 1;
+      background-color: #00bd56;
+      transform: skewX(-40deg);
+      z-index: -1; }
+  .latest-game__vs {
+    font-size: 3rem; }
+  .latest-game button {
+    grid-column: col-start 4 / col-end 5; }
+  .latest-game__img {
+    height: 10rem;
+    border-radius: 50%; }
+  .latest-game__team {
+    display: flex;
+    align-items: center; }
+    .latest-game__team:last-child span {
+      color: rgba(0, 0, 0, 0.5); }
+  .latest-game__points {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20rem; }
+    .latest-game__points span {
+      font-family: 'Oswald';
+      font-size: 6rem;
+      font-weight: 700; }
+    .latest-game__points h3 {
+      font-size: 2.5rem; }
+  .latest-game__video {
+    height: 30rem;
+    width: 80rem;
+    margin-top: 5rem;
+    grid-column: center-start / center-end;
+    overflow: hidden; }
+  .latest-game__preview {
+    justify-self: center;
+    transform: translateY(-9rem); }
+    .latest-game__preview::before {
+      content: 'sdf'; }
+
 *,
 *::before,
 *::after {
@@ -182,13 +272,17 @@ html {
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase; }
 
+.heading--white {
+  color: #fff !important; }
+
 .heading-1 {
   font-size: 8rem;
   line-height: 1.2;
   font-weight: 700; }
 
 .heading-2 {
-  font-size: 3rem;
+  color: #171b21;
+  font-size: 5rem;
   line-height: 1.2;
   font-weight: 700; }
 
@@ -197,13 +291,11 @@ html {
   line-height: 1.2;
   font-weight: 700; }
 
-.countdown {
-  background-color: #171b21;
-  grid-column: full-start / full-end; }
-
-.latest-game {
-  background-color: #00ff0d;
-  grid-column: full-start / full-end; }
+.heading-4 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #999; }
 
 .game-schedule {
   background-color: #00ffea;
