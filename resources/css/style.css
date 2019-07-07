@@ -448,6 +448,35 @@
       max-height: 120rem;
       max-width: 100%; }
 
+.subscription {
+  grid-column: full-start / full-end;
+  display: grid;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/bg_2.jpg);
+  padding: 15rem 0;
+  background-size: cover;
+  background-position: center; }
+  .subscription .heading-2 {
+    color: #fff;
+    margin-bottom: 4rem;
+    justify-self: center; }
+  .subscription__action {
+    justify-self: center;
+    display: flex; }
+    .subscription__action .btn {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      padding: 1rem 1.5rem; }
+  .subscription__input {
+    font-size: 1.5rem;
+    width: 30rem;
+    border: none;
+    border-top-left-radius: .3rem;
+    border-bottom-left-radius: .3rem;
+    line-height: 1;
+    padding-left: 1rem; }
+    .subscription__input::placeholder {
+      margin-left: 1rem; }
+
 *,
 *::before,
 *::after {
@@ -493,30 +522,6 @@ html {
   text-transform: uppercase;
   font-weight: 400;
   color: #999; }
-
-.squad {
-  background-color: #ea00ff;
-  grid-column: full-start / full-end; }
-
-.features {
-  background-color: #ff0040;
-  grid-column: center-start / center-end; }
-
-.testimonials {
-  background-color: #ffe600;
-  grid-column: full-start / full-end; }
-
-.blog {
-  background-color: #5eff00;
-  grid-column: center-start / center-end; }
-
-.stats {
-  background-color: #00ffb3;
-  grid-column: full-start / full-end; }
-
-.subscribe {
-  background-color: #0004ff;
-  grid-column: full-start / full-end; }
 
 .footer {
   background-color: #ff00dd;

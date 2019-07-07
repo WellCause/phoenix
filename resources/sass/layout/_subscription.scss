@@ -1,0 +1,39 @@
+.subscription {
+    grid-column: full-start / full-end;
+    display: grid;
+    background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(../img/bg_2.jpg);
+    padding: 15rem 0;
+    background-size: cover;
+    background-position: center;
+
+    .heading-2 {
+        color: #fff;
+        margin-bottom: 4rem;
+        justify-self: center;
+    }
+
+    &__action {
+        justify-self: center;
+        display: flex;
+
+        .btn {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            padding: 1rem 1.5rem;
+        }
+    }
+
+    &__input {
+        font-size: 1.5rem;
+        width: 30rem;
+        border: none;
+        border-top-left-radius: .3rem;
+        border-bottom-left-radius: .3rem;
+        line-height: 1;
+        padding-left: 1rem;
+
+        &::placeholder {
+            margin-left: 1rem;
+        }
+    }
+}
