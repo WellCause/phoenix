@@ -17,3 +17,10 @@
     font-weight: 700;
 }
 
+.heading-3 {
+    @extend .heading;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
