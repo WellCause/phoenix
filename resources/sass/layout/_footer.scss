@@ -1,0 +1,62 @@
+.footer {
+    background-color: #000;
+    grid-column: 1 / -1;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+    font-size: 1.5rem;
+    padding: 5rem;
+    
+    &__social {
+        height: 4.5rem;
+        width: 4.5rem;
+        fill: $color-green;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+
+    &__arrow {
+        height: 1.5rem;
+        width: 1.5rem;
+        fill: #fff;
+        margin-right: .5rem;
+    }
+
+    &__icon {
+        height: 2.5rem;
+        width: 2.5rem;
+        fill: #fff;
+        margin-right: 1rem;
+    }
+
+    &__text {
+        max-width: 70%;
+        margin-bottom: 5rem;
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &__link:link,
+    &__link:visited {
+        color: rgba(255,255,255, .5);
+        text-decoration: none;
+    }
+
+    &__copy {
+        color: rgba(255,255,255, .5);
+        justify-self: center;
+        grid-column: 1 / -1;
+        margin: 2rem;
+    }
+}

@@ -477,6 +477,49 @@
     .subscription__input::placeholder {
       margin-left: 1rem; }
 
+.footer {
+  background-color: #000;
+  grid-column: 1 / -1;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+  font-size: 1.5rem;
+  padding: 5rem; }
+  .footer__social {
+    height: 4.5rem;
+    width: 4.5rem;
+    fill: #00bd56;
+    cursor: pointer; }
+    .footer__social:not(:last-child) {
+      margin-right: 1rem; }
+  .footer__arrow {
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: #fff;
+    margin-right: .5rem; }
+  .footer__icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: #fff;
+    margin-right: 1rem; }
+  .footer__text {
+    max-width: 70%;
+    margin-bottom: 5rem; }
+  .footer__list {
+    list-style: none; }
+  .footer__item {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center; }
+  .footer__link:link, .footer__link:visited {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none; }
+  .footer__copy {
+    color: rgba(255, 255, 255, 0.5);
+    justify-self: center;
+    grid-column: 1 / -1;
+    margin: 2rem; }
+
 *,
 *::before,
 *::after {
@@ -494,7 +537,7 @@ html {
   font-family: 'Lato', sans-serif;
   color: #fff; }
 
-.heading, .heading-1, .heading-2, .heading-3 {
+.heading, .heading-1, .heading-2, .heading-3, .heading-5 {
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase; }
 
@@ -523,6 +566,7 @@ html {
   font-weight: 400;
   color: #999; }
 
-.footer {
-  background-color: #ff00dd;
-  grid-column: full-start / full-end; }
+.heading-5 {
+  text-transform: initial;
+  font-size: 2rem;
+  margin-bottom: 2rem; }
