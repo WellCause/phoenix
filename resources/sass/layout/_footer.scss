@@ -6,6 +6,7 @@
     grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
     font-size: 1.5rem;
     padding: 5rem;
+    grid-row-gap: 3rem;
     
     &__social {
         height: 4.5rem;

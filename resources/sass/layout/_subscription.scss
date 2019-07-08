@@ -10,6 +10,10 @@
         color: #fff;
         margin-bottom: 4rem;
         justify-self: center;
+
+        @media only screen and (max-width: $bp-smallest) {
+            text-align: center;
+        }
     }
 
     &__action {
@@ -34,6 +38,10 @@
 
         &::placeholder {
             margin-left: 1rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            width: 15rem;
         }
     }
 }

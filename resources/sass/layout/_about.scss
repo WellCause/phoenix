@@ -17,6 +17,10 @@
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
         align-items: center;
+
+        @media only screen and (max-width: $bp-smallest) {
+            grid-template-columns: 1fr;
+        }
         
         &::before {
             @include left-before;
@@ -69,5 +73,9 @@
         justify-self: end;
         z-index: 6;
         box-shadow: 0 0 2rem rgba(0, 0, 0, .5);
+
+        @media only screen and (max-width: $bp-smallest) {
+            display: none;
+        }
     }
 }

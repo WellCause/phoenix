@@ -8,6 +8,17 @@
     height: 13rem;
     z-index: 10;
 
+    @media only screen and (max-width: $bp-small) {
+        height: 10rem;
+        background-color: rgba($color-primary, .8);
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        height: 14rem;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
     &::before {
         content: '';
         width: 43%;
@@ -17,7 +28,15 @@
         position: absolute;
         z-index: 1;
         background-color: $color-primary;
-        transform: skewX(-40deg)
+        transform: skewX(-40deg);
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 50%;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            display: none;
+        }
     }
 
     &__club {
@@ -26,6 +45,10 @@
         display: flex;
         align-items: center;
         z-index: 10;
+
+        @media only screen and (max-width: $bp-smallest) {
+            grid-column: 1 / -1;
+        }
     }
 
     &__logo {
@@ -45,6 +68,11 @@
             position: relative;
             z-index: 10;
         }
+
+        @media only screen and (max-width: $bp-smallest) {
+            grid-column: 1 / -1;
+            justify-self: center;
+        }
     }
 
     .nav::before {
@@ -56,5 +84,9 @@
         position: absolute;
         background-color: rgba(255, 255, 255, .1);
         z-index: -1;
+
+        @media only screen and (max-width: $bp-small) {
+            display: none;
+        }
     }
 }

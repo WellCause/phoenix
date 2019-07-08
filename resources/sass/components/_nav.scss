@@ -19,12 +19,25 @@
             background-color: $color-primary;
             padding: 1.5rem 2rem;
             border-radius: .3rem;
+
+            @media only screen and (max-width: $bp-smallest) {
+                background-color: transparent;
+                text-align: center;
+            }
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: 1.5rem;
+            padding: 1.5rem 1rem !important;
         }
 
         &:hover {
             color: $color-green;
         }
 
+        @media only screen and (max-width: $bp-medium) {
+            padding: 1rem 1.5rem;
+        }
     }
 
     &__link:link,

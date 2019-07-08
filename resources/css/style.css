@@ -33,8 +33,19 @@
       background-color: #171b21;
       padding: 1.5rem 2rem;
       border-radius: .3rem; }
+      @media only screen and (max-width: 36.25em) {
+        .nav__item:last-child {
+          background-color: transparent;
+          text-align: center; } }
+    @media only screen and (max-width: 36.25em) {
+      .nav__item {
+        font-size: 1.5rem;
+        padding: 1.5rem 1rem !important; } }
     .nav__item:hover {
       color: #00bd56; }
+    @media only screen and (max-width: 47.5em) {
+      .nav__item {
+        padding: 1rem 1.5rem; } }
   .nav__link:link, .nav__link:visited {
     text-decoration: none;
     color: inherit; }
@@ -63,6 +74,15 @@
   align-items: center;
   height: 13rem;
   z-index: 10; }
+  @media only screen and (max-width: 39.375em) {
+    .header {
+      height: 10rem;
+      background-color: rgba(23, 27, 33, 0.8); } }
+  @media only screen and (max-width: 36.25em) {
+    .header {
+      height: 14rem;
+      grid-template-columns: 1fr;
+      justify-items: center; } }
   .header::before {
     content: '';
     width: 43%;
@@ -73,12 +93,21 @@
     z-index: 1;
     background-color: #171b21;
     transform: skewX(-40deg); }
+    @media only screen and (max-width: 47.5em) {
+      .header::before {
+        width: 50%; } }
+    @media only screen and (max-width: 39.375em) {
+      .header::before {
+        display: none; } }
   .header__club {
     position: relative;
     grid-column: center-start / 5;
     display: flex;
     align-items: center;
     z-index: 10; }
+    @media only screen and (max-width: 36.25em) {
+      .header__club {
+        grid-column: 1 / -1; } }
   .header__logo {
     position: relative;
     display: inline-block;
@@ -92,6 +121,10 @@
     .header .nav__list {
       position: relative;
       z-index: 10; }
+    @media only screen and (max-width: 36.25em) {
+      .header .nav {
+        grid-column: 1 / -1;
+        justify-self: center; } }
   .header .nav::before {
     content: '';
     width: 100%;
@@ -101,6 +134,9 @@
     position: absolute;
     background-color: rgba(255, 255, 255, 0.1);
     z-index: -1; }
+    @media only screen and (max-width: 39.375em) {
+      .header .nav::before {
+        display: none; } }
 
 .hero {
   grid-column: full-start / full-end;
@@ -125,6 +161,9 @@
     grid-row: 3 / 4; }
   .hero .btn--blue {
     margin-right: .5rem; }
+    @media only screen and (max-width: 36.25em) {
+      .hero .btn--blue {
+        margin-bottom: 1rem; } }
 
 .countdown {
   padding: 4rem;
@@ -137,12 +176,18 @@
   justify-content: space-evenly;
   justify-items: center;
   align-items: center; }
+  @media only screen and (max-width: 96.25em) {
+    .countdown {
+      grid-template-columns: repeat(2, minmax(35rem, 1fr)); } }
+  @media only screen and (max-width: 47.5em) {
+    .countdown {
+      grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr)); } }
   .countdown__vs {
     filter: brightness(0.8);
     display: flex;
     align-items: center; }
     .countdown__vs > *:not(:last-child) {
-      margin-right: 5rem; }
+      margin-right: 3.5rem; }
     .countdown__vs span {
       display: inline-block;
       transform: translateY(-1.6rem);
@@ -154,15 +199,19 @@
     .countdown__team .heading-3 {
       text-transform: uppercase; }
   .countdown__img {
+    display: block;
     height: 9rem;
     border-radius: 50%;
-    margin-bottom: .8rem; }
+    margin-bottom: 1rem; }
   .countdown__event {
     filter: brightness(0.7); }
     .countdown__event span {
       font-size: 1.5rem;
       display: inline-block;
       margin-top: 2rem; }
+    @media only screen and (max-width: 96.25em) {
+      .countdown__event {
+        text-align: center; } }
   .countdown__time {
     display: flex; }
     .countdown__time > * {
@@ -170,6 +219,9 @@
     .countdown__time > *:not(:last-child) {
       padding-right: 4rem;
       border-right: 1px solid rgba(255, 255, 255, 0.1); }
+    @media only screen and (max-width: 96.25em) {
+      .countdown__time {
+        order: 3; } }
   .countdown__count {
     filter: brightness(0.9);
     display: flex;
@@ -177,6 +229,9 @@
     align-items: center; }
     .countdown__count .heading-2 {
       font-size: 5rem; }
+      @media only screen and (max-width: 36.25em) {
+        .countdown__count .heading-2 {
+          font-size: 3rem; } }
     .countdown__count span {
       filter: brightness(0.7);
       font-size: 1.5rem; }
@@ -201,6 +256,9 @@
     font-size: 1.8rem;
     display: inline-block;
     margin-top: 5rem; }
+    @media only screen and (max-width: 36.25em) {
+      .latest-game__date {
+        text-align: center; } }
   .latest-game__result {
     grid-column: col-start 2 / col-end 7;
     display: flex;
@@ -232,6 +290,9 @@
       z-index: -1;
       background-color: #00bd56;
       height: 60rem; }
+    @media only screen and (max-width: 36.25em) {
+      .latest-game__result {
+        flex-direction: column; } }
   .latest-game__vs {
     font-size: 3rem; }
   .latest-game button {
@@ -239,6 +300,9 @@
   .latest-game__img {
     height: 10rem;
     border-radius: 50%; }
+    @media only screen and (max-width: 36.25em) {
+      .latest-game__img {
+        display: none; } }
   .latest-game__team {
     display: flex;
     align-items: center; }
@@ -266,6 +330,9 @@
     transform: translateY(-9rem); }
     .latest-game__preview::before {
       content: 'sdf'; }
+    @media only screen and (max-width: 58.125em) {
+      .latest-game__preview {
+        width: 60vw; } }
 
 .schedule {
   padding: 3rem 0;
@@ -302,7 +369,7 @@
     display: flex;
     align-items: center; }
     .schedule__vs > *:not(:last-child) {
-      margin-right: 5rem; }
+      margin-right: 3.5rem; }
     .schedule__vs span {
       display: inline-block;
       transform: translateY(-1.6rem);
@@ -314,9 +381,10 @@
     .schedule__team .heading-3 {
       text-transform: uppercase; }
   .schedule__img {
+    display: block;
     height: 9rem;
     border-radius: 50%;
-    margin-bottom: .8rem; }
+    margin-bottom: 1rem; }
 
 .about {
   grid-column: full-start / full-end;
@@ -336,6 +404,9 @@
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     align-items: center; }
+    @media only screen and (max-width: 36.25em) {
+      .about__content {
+        grid-template-columns: 1fr; } }
     .about__content::before {
       content: '';
       width: 500%;
@@ -389,6 +460,9 @@
     justify-self: end;
     z-index: 6;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5); }
+    @media only screen and (max-width: 36.25em) {
+      .about__img {
+        display: none; } }
 
 .next {
   grid-column: center-start / center-end;
@@ -397,6 +471,9 @@
   grid-row-gap: 2rem;
   grid-column-gap: 3rem;
   margin: 3rem 0 6rem 0; }
+  @media only screen and (max-width: 39.375em) {
+    .next {
+      grid-template-columns: 1fr; } }
   .next .heading-2,
   .next .heading-4 {
     grid-column: 1 / -1;
@@ -429,7 +506,7 @@
     display: flex;
     align-items: center; }
     .next__vs > *:not(:last-child) {
-      margin-right: 5rem; }
+      margin-right: 3.5rem; }
     .next__vs span {
       display: inline-block;
       transform: translateY(-1.6rem);
@@ -441,12 +518,16 @@
     .next__team .heading-3 {
       text-transform: uppercase; }
   .next__img {
+    display: block;
     height: 9rem;
     border-radius: 50%;
-    margin-bottom: .8rem; }
+    margin-bottom: 1rem; }
     .next__img--full {
       max-height: 120rem;
       max-width: 100%; }
+      @media only screen and (max-width: 39.375em) {
+        .next__img--full {
+          display: none; } }
 
 .subscription {
   grid-column: full-start / full-end;
@@ -459,6 +540,9 @@
     color: #fff;
     margin-bottom: 4rem;
     justify-self: center; }
+    @media only screen and (max-width: 36.25em) {
+      .subscription .heading-2 {
+        text-align: center; } }
   .subscription__action {
     justify-self: center;
     display: flex; }
@@ -476,6 +560,9 @@
     padding-left: 1rem; }
     .subscription__input::placeholder {
       margin-left: 1rem; }
+    @media only screen and (max-width: 39.375em) {
+      .subscription__input {
+        width: 15rem; } }
 
 .footer {
   background-color: #000;
@@ -484,7 +571,8 @@
   justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
   font-size: 1.5rem;
-  padding: 5rem; }
+  padding: 5rem;
+  grid-row-gap: 3rem; }
   .footer__social {
     height: 4.5rem;
     width: 4.5rem;
@@ -530,6 +618,9 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box; }
+  @media only screen and (max-width: 58.125em) {
+    html {
+      font-size: 50%; } }
 
 .container {
   display: grid;
@@ -551,7 +642,7 @@ html {
 
 .heading-2 {
   color: #171b21;
-  font-size: 5rem;
+  font-size: 4rem;
   line-height: 1.2;
   font-weight: 700; }
 
